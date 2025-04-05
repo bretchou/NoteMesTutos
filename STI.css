@@ -1,0 +1,55 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Style pour le titre */
+h1 {
+    color: black;
+    text-align: center;
+}
+
+/* Style pour le paragraphe */
+p {
+    font-size: 18px;
+    color: black;
+}
+
+/* Style pour les liens */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* On cache les boutons radio */
+.rating input {
+    display: none;
+}
+
+/* Style des étoiles */
+.rating label {
+    font-size: 40px;
+    color: #ddd; /* Gris par défaut */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Changer la couleur des étoiles sélectionnées et celles avant */
+.rating input:checked ~ label {
+    color: gold;
+}
+
+/* Pour s'assurer que l'effet marche bien, on inverse l'ordre des étoiles */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+}
