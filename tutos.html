@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation principale -->
+    <nav class="navbar">
+        <div class="logo">MonSite</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tutos.html">Tutos</a></li>
+            <li><a href="devlogs.html">Devlogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="tuto-layout">
+        <!-- Menu latéral de filtres -->
+        <aside class="sidebar">
+            <h2>Catégories</h2>
+            <select id="categoryFilter" onchange="filterTutos()">
+                <option value="all">Tous</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="lua">Lua</option>
+            </select>
+        </aside>
+
+        <!-- Contenu principal (grille des tutos) -->
+        <section class="content">
+            <h1>Mes tutoriels</h1>
+
+<!-- Scroll box pour les vidéos -->
+<div class="tuto-scrollbox">
+    <!-- Tuto 1 - HTML -->
+    <div class="tuto-card html">
+        <img src="HTMLimage1.png" alt="Miniature tuto HTML">
+        <h3>Les Bases du HTML ! Cours Français Gratuit et Rapide</h3>
+        <p>Découvre les bases du HTML en quelques minutes.</p>
+        <a href="https://youtu.be/h2IOqV59rhE" target="_blank">Voir la vidéo</a>
+        <form action="https://formspree.io/f/mnnpgdaw" method="POST">
+            <!-- Champ caché pour le nom de la vidéo -->
+            <input type="hidden" name="Titre de la vidéo" value="Les Bases du HTML ! Cours Français Gratuit et Rapide">
+
+            <!-- Système de notation -->
+            <label for="rating">Note du montage vidéo :</label><br>
+            <div class="rating">
+                <input type="radio" name="note du montage" value="5" id="star5-html-montage" required><label for="star5-html-montage">★</label>
+                <input type="radio" name="note du montage" value="4" id="star4-html-montage" required><label for="star4-html-montage">★</label>
+                <input type="radio" name="note du montage" value="3" id="star3-html-montage" required><label for="star3-html-montage">★</label>
+                <input type="radio" name="note du montage" value="2" id="star2-html-montage" required><label for="star2-html-montage">★</label>
+                <input type="radio" name="note du montage" value="1" id="star1-html-montage" required><label for="star1-html-montage">★</label>
+            </div>
+            <label for="rating">Note du tutoriel :</label><br>
+            <div class="rating">
+                <input type="radio" name="Note du tutoriel" value="5" id="star5-html-tuto" required><label for="star5-html-tuto">★</label>
+                <input type="radio" name="Note du tutoriel" value="4" id="star4-html-tuto" required><label for="star4-html-tuto">★</label>
+                <input type="radio" name="Note du tutoriel" value="3" id="star3-html-tuto" required><label for="star3-html-tuto">★</label>
+                <input type="radio" name="Note du tutoriel" value="2" id="star2-html-tuto" required><label for="star2-html-tuto">★</label>
+                <input type="radio" name="Note du tutoriel" value="1" id="star1-html-tuto" required><label for="star1-html-tuto">★</label>
+            </div>
+            <label for="rating">Note de l'audio (musique, son micro) :</label><br>
+            <div class="rating">
+                <input type="radio" name="note de l'audio" value="5" id="star5-html-audio" required><label for="star5-html-audio">★</label>
+                <input type="radio" name="note de l'audio" value="4" id="star4-html-audio" required><label for="star4-html-audio">★</label>
+                <input type="radio" name="note de l'audio" value="3" id="star3-html-audio" required><label for="star3-html-audio">★</label>
+                <input type="radio" name="note de l'audio" value="2" id="star2-html-audio" required><label for="star2-html-audio">★</label>
+                <input type="radio" name="note de l'audio" value="1" id="star1-html-audio" required><label for="star1-html-audio">★</label>
+            </div>
+            <input type="name" name="name" placeholder="Votre pseudo"><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

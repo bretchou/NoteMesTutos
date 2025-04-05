@@ -1,0 +1,146 @@
+/* -----------------------
+   STYLE GLOBAL
+----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.rating {
+    direction: rtl; /* Pour afficher les étoiles de droite à gauche */
+    unicode-bidi: bidi-override;
+    font-size: 30px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    color: #ddd; /* Gris clair par défaut */
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+
+/* -----------------------
+   NAVBAR
+----------------------- */
+.navbar {
+    background-color: #333; /* Gris foncé */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00; /* Jaune clair */
+}
+
+/* -----------------------
+   SIDEBAR (Filtres)
+----------------------- */
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1; /* Gris très clair */
+    padding: 1rem;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Menu déroulant de catégories */
+select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #fff; /* Blanc */
+    border: 1px solid #ccc; /* Gris clair */
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* -----------------------
+   CONTENU DES TUTORIELS
+----------------------- */
+.content {
+    flex-grow: 1;
+}
+
+.tuto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tuto-card {
+    background-color: #fff; /* Blanc */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tuto-card img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* -----------------------
+   SCROLLBOX POUR LES TUTORIELS
+----------------------- */
+.tuto-scrollbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 500px; /* Hauteur de la box */
+    overflow-y: scroll; /* Permet le défilement vertical */
+    padding-right: 10px; /* Espace pour la barre de défilement */
+    border: 1px solid #ccc; /* Gris clair */
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.tuto-card:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
